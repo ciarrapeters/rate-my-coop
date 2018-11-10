@@ -1,3 +1,15 @@
-<h1>Here we goooo!</h1>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid nav-contents">
+    <ul class="nav navbar-nav">
+      {{#link-to "index" class="nav-text"}}
+        Home
+      {{/link-to}}
 
-{{outlet}}
+      <a>Profile</a>
+    </ul>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="body">
+  {{outlet}}
+</div>
