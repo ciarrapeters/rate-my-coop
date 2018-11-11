@@ -5,8 +5,30 @@ export default function() {
       id: 'company-1',
       attributes: {
         name: 'blueport',
-        students: [{"name": 'ashna', "contact": 'shah.ash@husky.neu.edu'}, 
-        {"name": 'ciarra', "contact": 'peters.ci@husky.neu.edu'}]
+        students: [{
+          "name": 'ashna',
+          "contact": 'shah.ash@husky.neu.edu',
+          "mycoops": [{
+            "companyName": "blueport",
+            "geoLocation": "Boston, MA",
+            "review": "Great!",
+            "year": "2017"
+          }, {
+            "companyName": "fluidscreen",
+            "geoLocation": "Boston, MA",
+            "review": "Meh!",
+            "year": "2018"
+          }]
+        }, {
+          "name": 'ciarra',
+          "contact": 'peters.ci@husky.neu.edu',
+            "mycoops": [{
+            "companyName": "blueport",
+            "geoLocation": "Boston, MA",
+            "review": "Great!",
+            "year": "2017"
+          }]
+        }]
       },
     }, {
       type: 'companies',

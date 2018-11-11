@@ -3,10 +3,12 @@
     <span>Company:</span> {{company.name}}
   </div>
   <div class="detail type">
-    <span>Student:</span>
       {{#each company.students as |student|}}
         <li>
-          {{company.students}}
+          <span>Student: {{student.name}}, contact: {{student.contact}}</span>
+          {{#each student.mycoops as |coop|}}
+            <span>coop: {{coop.companyName}}</span>
+          {{/each}}
         </li>
       {{/each}}
   </div>
