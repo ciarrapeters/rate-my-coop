@@ -3,6 +3,12 @@
   <p>We hope you find exactly what you're looking for in a place to stay.</p>
 </div>
 
-{{#each model as |companyObject|}}
-  {{company-listing company=companyObject}}
-{{/each}}
+{{#list-filter filter=(action "filterByCompany") as |filteredResults|}}
+  <ul class="results">
+    {{#each filteredResults as |companyObject|}}
+      <li>{{company-listing company=companyObject}}</li>
+    {{/each}}  
+  </ul>
+{{/list-filter}}
+{{outlet}}
+
