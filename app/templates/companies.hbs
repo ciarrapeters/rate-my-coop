@@ -3,8 +3,8 @@
   <p>We hope you find exactly what you're looking for in a place to stay.</p>
 </div>
 
-{{#list-filter filter=(action 'filterByCompany') as |filteredResults|}}
-  <ul class='results'>
+{{#list-filter filter=(action "filterByCompany") as |filteredResults|}}
+  <ul class="results">
     {{#each filteredResults as |companyObject|}}
       <li>{{company-listing company=companyObject}}</li>
     {{/each}}  

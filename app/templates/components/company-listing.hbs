@@ -1,8 +1,13 @@
-  <article class="listing">
-    <div class="detail owner">
-      <span>Owner:</span> {{company.name}}
-    </div>
-    <div class="detail type">
-      <span>Type:</span> {{company.student}}
-    </div>
-  </article>
+<article class="listing">
+  <div class="detail owner">
+    <span>Company:</span> {{company.name}}
+  </div>
+  <div class="detail type">
+    <span>Student:</span>
+      {{#each company.students as |student|}}
+        <li>
+          {{company.students}}
+        </li>
+      {{/each}}
+  </div>
+</article>
