@@ -7,3 +7,35 @@
 .nav-text {
   color: white;
 }
+
+.jumbotron {
+  background-color: #bce8f1;
+}
+
+.form-control {
+  padding: 30px;
+  font-size: 18px;
+}
+
+.panel-heading {
+  background-color: #bce8f1;
+}
+
+.navbar-default {
+  background-color: #bce8f1;
+  border-color: #41cae0;
+}
+
+.detail {
+  width: 36%;
+  display: inline-block;
+  padding: 10px 15px 0 0;
+  margin: 0;
+  font-weight: 300;
+  font-style: italic;
+
+  span {
+    font-style: default;
+    font-weight: 500;
+  }
+}
