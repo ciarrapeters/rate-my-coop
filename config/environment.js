@@ -6,6 +6,23 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+
+    firebase: {
+      apiKey: 'AIzaSyD16-vRj81I-EcFVSGBXjyClrWq8Zq-zZI',
+      authDomain: 'rate-my-coop.firebaseapp.com',
+      databaseURL: 'https://rate-my-coop.firebaseio.com',
+      projectId: "rate-my-coop",
+      storageBucket: 'rate-my-coop.appspot.com',
+      messagingSenderId: "196089755604"
+    },
+
+    // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
