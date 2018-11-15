@@ -1,14 +1,14 @@
 <div class="container">
-  <h2>Welcome!</h2>
-  <p>We hope you find exactly what you're looking for in a place to stay.</p>
+  <div class="jumbotron">
+    <h1>Welcome!</h1>
+    <p><strong>Rate My Coop</strong> is designed to connect YOU to students who have worked at a company you are interested in. By giving you access to ratings from other students and their associated contact information, you can make informed decisions about your next co-op experience without having to wait for an advisor. Happy hunting!</p>
+  </div>
+  {{#list-filter filter=(action "filterByCompany") as |filteredResults|}}
+    <br>
+    {{#each filteredResults as |companyObject|}}
+      <div class="panel-group">{{company-listing company=companyObject}}</div>
+    {{/each}}  
+  {{/list-filter}}
 </div>
 
-{{#list-filter filter=(action "filterByCompany") as |filteredResults|}}
-  <ul>
-    {{#each filteredResults as |companyObject|}}
-      <li>{{company-listing company=companyObject}}</li>
-    {{/each}}  
-  </ul>
-{{/list-filter}}
 {{outlet}}
-

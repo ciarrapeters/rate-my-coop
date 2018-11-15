@@ -1,17 +1,27 @@
-<article class="listing">
-  <div class="detail owner">
-    <span>Company:</span> {{company.name}}
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h4>{{company.name}}</h4>
   </div>
-  <!-->
-  <div class="detail type">
-      {{#each company.students as |student|}}
-        <li>
-          <span>Student: {{student.name}}, contact: {{student.contact}}</span>
+  <div class="panel-body">
+    <div class="list-group">
+    {{#each company.students as |student|}}
+      <div class="list-group-item">
+        <ul class="detail">
+          <span>Student: </span>
+          {{student.name}}
+        </ul>
+        <ul class="detail">
+          <span>Contact: </span>
+          {{student.contact}}
+        </ul>
+        <ul class="detail">
+          <span>Coops: </span>
           {{#each student.mycoops as |coop|}}
-            <span>coop: {{coop.companyName}}</span>
+            {{coop.companyName}}
           {{/each}}
-        </li>
-      {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+    </div>
   </div>
-  <!-->
-</article>
+</div>
