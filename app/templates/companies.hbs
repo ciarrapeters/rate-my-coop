@@ -4,7 +4,7 @@
 </div>
 
 {{#list-filter filter=(action "filterByCompany") as |filteredResults|}}
-  <ul class="results">
+  <ul>
     {{#each filteredResults as |companyObject|}}
       <li>{{company-listing company=companyObject}}</li>
     {{/each}}  
